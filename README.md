@@ -32,18 +32,43 @@ O Email-Service é construído com Node.js e Express.js, proporcionando uma arqu
 
 A solução é baseada em uma arquitetura de microserviços, dividindo a aplicação em três serviços principais: `auth-service`, `api-key-service` e `email-service`. Cada `microserviço` segue a arquitetura em camadas (`layered architecture`) para garantir uma organização clara e modular do código.
 
-## Tecnologias Utilizadas
+## Casos de Uso
+![Diagrama de Caso de Uso - Serviço de emails vpd](https://github.com/WesleyUlisses/Servi-o-de-Emails/assets/90068576/8fdca770-2497-4297-a02c-6d8d66d61155)
 
-Node.js
-Express.js
-TypeScript
-Amazon SES
-Docker
-Redis
-PostgreSQL
-Sequelize ORM
-Google Cloud
-Swagger
+## Tecnologias Utilizadas
+<ol>
+  <li>
+    Node.js
+  </li>
+  <li>
+    Express.js
+  </li>
+<li>
+  TypeScript
+</li>
+<li>
+  Amazon SES
+</li>
+<li>
+  Docker
+</li>
+<li>
+  Redis
+</li>
+<li>
+  PostgreSQL
+</li>
+<li>
+  Sequelize ORM
+</li>
+<li>
+  Google Cloud
+</li>
+<li>
+  Swagger
+</li>
+</ol>
+
 
 ## Problemas Conhecidos
 
