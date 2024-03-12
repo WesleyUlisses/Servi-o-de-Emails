@@ -13,20 +13,20 @@ class UserModel extends Model {
 UserModel.init(
     {
         id: {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
         username: {
-            type: new DataTypes.STRING(128),
+            type: DataTypes.STRING(128),
             allowNull: false
         },
         password: {
-            type: new DataTypes.STRING(128),
+            type: DataTypes.STRING(128),
             allowNull: false
         },
         email: {
-            type: new DataTypes.STRING(128),
+            type: DataTypes.STRING(128),
             allowNull: false
         }
     },
