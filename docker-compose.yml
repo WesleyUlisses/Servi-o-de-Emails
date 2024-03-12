@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  auth-service:
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    # Configurações para o serviço de autenticação
+
+  email-service:
+    build:
+      context: ./email-service
+      dockerfile: Dockerfile
+    # Configurações para o serviço de e-mail
+
+  api-key-service:
+    build:
+      context: ./api-key-service
+      dockerfile: Dockerfile
+    # Configurações para o serviço de gestão de chaves de API
+
+  database:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydatabase
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    # Configurações para o serviço de banco de dados
+
+volumes:
+  db_data:
