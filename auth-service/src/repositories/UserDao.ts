@@ -64,10 +64,11 @@ export default class UserDao {
         }
     }
 
-    public async deleteUser(id: number): Promise<void> {
+    public async deleteUser(id: number): Promise<boolean> {
 
         try {
-            await UserModel.destroy({ where: { id } });
+            const user = await UserModel.destroy({ where: { id } });
+            return user ? true : false;
 
         } catch ( error: any ) {
             throw new Error(`Erro ao deletar usuário: ${error}`);

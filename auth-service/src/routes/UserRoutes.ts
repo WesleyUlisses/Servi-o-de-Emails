@@ -12,10 +12,11 @@ export default class UserRoutes {
     }
 
     public routes(): Router {
-        this.router.post("/", this.userController.createUser);
+        this.router.post("/create", this.userController.createUser);
         this.router.get("/:id", this.userController.getUserById);
-        this.router.get("/email/:email", this.userController.getUserByEmail);
         this.router.put("/:id", this.userController.updateUser);
+        this.router.delete("/:id", this.userController.deleteUser);
+        this.router.post("/login", this.userController.login);
         return this.router;
     }
 }
