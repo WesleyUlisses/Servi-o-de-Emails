@@ -27,6 +27,36 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Action Check Typescript errors
+      # You may pin to the exact commit or the version.
+      # uses: Arhia/action-check-typescript@0e25ee8039f7f92080a6bea8b3d60fa4ab70acb2
+      uses: Arhia/action-check-typescript@v1.1.0
+      with:
+        # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
+        repo-token: 
+        # Directory where to run install and build. Default is '.'
+        directory: # optional, default is .
+        # List of files changed in the current PR (separated by space), use action 'futuratrepadeira/changed-files' for that
+        files-changed: # optional, default is 
+        # List of files added in the current PR (separated by space), use action 'futuratrepadeira/changed-files' for that
+        files-added: # optional, default is 
+        # List of files deleted in the current PR (separated by space), use action 'futuratrepadeira/changed-files' for that
+        files-deleted: # optional, default is 
+        # List of files with added and removed lines, use action 'Equip-Collaboration/diff-line-numbers' for that
+        line-numbers: # optional
+        # Path of tsconfig file. default is './tsconfig.json'
+        ts-config-path: # optional, default is ./tsconfig.json
+        # Report status as a CI Check
+        use-check: # optional
+        # Allowed values : added, errors_in_pr, errors_in_code
+        check-fail-mode: 
+        # Allowed values : comment, annotate, both
+        output-behaviour: # optional, default is comment
+        # Allowed values : new, edit
+        comment-behaviour: # optional, default is new
+        # Set true to log ts errors in base branch and pr branch
+        debug: # optional
+              
     - name: Build
       run: |
         npm install
