@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  auth-service:
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=postgres://myuser:mypassword@database:5432/mydatabase
+      - JWT_SECRET=mysecret
+    volumes:
+      - ./auth-service:/app
+    depends_on:
+      - database
+
+  database:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydatabase
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data: {
+    driver: local
+  }
