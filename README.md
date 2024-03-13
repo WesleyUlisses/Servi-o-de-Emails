@@ -72,8 +72,8 @@ A solução é baseada em uma arquitetura de microserviços, dividindo a aplica�
 
 ## Problemas Conhecidos
 
-Suporte apenas ao domínio de e-mails do próprio serviço.
-Documentação implantada apenas com Swagger.
+1. Suporte apenas ao domínio de e-mails do próprio serviço.
+2. Documentação implantada apenas com Swagger.
 
 ## Contribuindo
 
