@@ -28,7 +28,6 @@ Instruções sobre como usar a solução e exemplos de casos de uso.
 
 ## Arquitetura
 
-O Email-Service é construído com Node.js e Express.js, proporcionando uma arquitetura leve e eficiente para lidar com solicitações de envio de e-mails. A integração com o Amazon SES é feita de forma transparente, garantindo alta confiabilidade e escalabilidade.
 
 A solução é baseada em uma arquitetura de microserviços, dividindo a aplicação em três serviços principais: `auth-service`, `api-key-service` e `email-service`. Cada `microserviço` segue a arquitetura em camadas (`layered architecture`) para garantir uma organização clara e modular do código.
 
@@ -49,6 +48,12 @@ Swagger
 
 Suporte apenas ao domínio de e-mails do próprio serviço.
 Documentação implantada apenas com Swagger.
+
+## Patters Aplicados
+
+Replicated Data Pattern:
+
+- Este pattern foi utilizado para solução de um problema oriundo da arquitetura anterior deste projeto, o mesmo em sua estrutura original utilizava-se de uma arquitetura monolítica, com uma base de dados compartilhada, ou seja, possui-se acoplamento em torno da base dados. Em razão disto, aderimos ao replicamento de algumas entidades, interfaces e models, para lidar com o armazenamento e uso de dados, principalmente em tabelas onde existe a presença de foreign keys apontando para tabelas que são usadas em outros serviços de nosso projeto.
 
 ## Contribuindo
 
