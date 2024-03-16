@@ -6,12 +6,12 @@ services:
       context: ./auth-service
       dockerfile: Dockerfile
     ports:
-      - "3000:3003"
+      - "3000:3000"
     environment:
       - NODE_ENV=production
-      - PORT=3003
-      - DATABASE_URL='mysql://root:2002@localhost:3306/key-service'
-      - JWT_SECRET='zxqf7p7D^e5vY^Gz!%p9Rt^Xh$MqATF8'
+      - PORT=3000
+      - DATABASE_URL=postgres://myuser:mypassword@database:5432/mydatabase
+      - JWT_SECRET=mysecret
     volumes:
       - ./auth-service:/app
     depends_on:
