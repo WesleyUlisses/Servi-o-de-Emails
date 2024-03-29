@@ -4,11 +4,12 @@ import { database } from "../../configs/Database";
 
 class EmailModel extends Model implements IEmail {
     
-    idEmail: number;
-    sender: string;
-    receiver: string;
-    subject: string;
-    body: string;
+    idEmail?: number;
+    sender?: string;
+    receiver?: string;
+    subject?: string;
+    body?: string;
+    api_key?: string;
 
 }
 
@@ -31,6 +32,10 @@ EmailModel.init({
         allowNull: false
     },
     body: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    api_key: {
         type: DataTypes.STRING,
         allowNull: false
     }

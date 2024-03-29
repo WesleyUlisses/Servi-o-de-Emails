@@ -13,7 +13,8 @@ export default class EmailDao {
                 sender: email.sender,
                 receiver: email.receiver,
                 subject: email.subject,
-                body: email.body
+                body: email.body,
+                api_key: email.api_key
             }) as IEmail;
 
             return emailSaved;
