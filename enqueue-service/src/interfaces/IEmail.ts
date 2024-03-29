@@ -1,6 +1,6 @@
 export default interface IEmail {
     
-    id: number;
+    idEmail: number;
     sender: string;
     receiver: string;
     subject: string;

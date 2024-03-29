@@ -1,9 +1,7 @@
-import IEmail from "./IEmail";
-import IEmailQueue from "./IEmailQueue";
-
 export default interface IJobQueueEmail {
 
-    email: IEmail;
-    emailQueue: IEmailQueue;
+    idJobQueueEmail: number;
+    idEmail: number;
+    idEmailQueue: number;
     
 }
