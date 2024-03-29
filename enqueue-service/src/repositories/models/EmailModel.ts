@@ -1,6 +1,6 @@
-import { IEmail } from "../interfaces/Interfaces";
+import { IEmail } from "../../interfaces/Interfaces";
 import { DataTypes, Model} from "sequelize";
-import { database } from "../configs/Database";
+import { database } from "../../configs/Database";
 
 class EmailModel extends Model implements IEmail {
     

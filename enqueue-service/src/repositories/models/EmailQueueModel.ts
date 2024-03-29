@@ -1,6 +1,6 @@
-import { IEmailQueue } from "../interfaces/Interfaces";
+import { IEmailQueue } from "../../interfaces/Interfaces";
 import { DataTypes, Model} from "sequelize";
-import { database } from "../configs/Database";
+import { database } from "../../configs/Database";
 
 class EmailQueueModel extends Model implements IEmailQueue {
     

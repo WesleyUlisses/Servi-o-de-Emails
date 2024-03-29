@@ -1,8 +1,8 @@
-import { IJobQueueEmail } from "../interfaces/Interfaces";
+import { IJobQueueEmail } from "../../interfaces/Interfaces";
 import EmailModel from "./EmailModel";
 import EmailQueueModel from "./EmailQueueModel";
 import { DataTypes, Model} from "sequelize";
-import { database } from "../configs/Database";
+import { database } from "../../configs/Database";
 
 class JobQueueEmailModel extends Model implements IJobQueueEmail {
     
